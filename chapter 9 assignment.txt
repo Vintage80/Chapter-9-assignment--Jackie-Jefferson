@@ -1,0 +1,76 @@
+// Online C compiler to run C program online
+#include <iostream>
+using namespace std;
+//Rectangle class
+class Rectangle
+{
+    private:
+    double width;
+    double height;
+    
+    public:
+    //No arg contructor
+    Rectangle()
+    {
+        width = 1;
+        height = 1;
+    }
+    
+    //Arg contructor
+    Rectangle(double w, double h)
+    {
+        width = w;
+        height = h;
+    }
+    
+    //Accessor and Mutator methods
+    void setWidth(double w)
+    {
+        width = w;
+    }
+    void setHeight(double h)
+    {
+        height = h;
+    }
+    double getWidth()
+    {
+        return width;
+    }
+    double getHeight()
+    {
+        return height;
+    }
+    
+    //Area
+    double getArea()
+    {
+        return (width * height);
+    }
+    
+    //Perimeter
+    double getPerimeter()
+    {
+        return(2 * (width + height));
+    }
+};
+    //Main function
+    int main(int argc, char**argv)
+    {
+//Creating Rectangle objects
+Rectangle r1(4, 40);
+Rectangle r2(3.5, 35.9);
+
+//Displaying results
+cout << "\nRectangle 1:\n\n";
+cout << "\nWidth:"
+<< r1.getWidth() << "\nHeight: " << r1.getHeight();
+cout << "\nArea:" << r1.getArea() << "\nPerimeter:" << r1.getPerimeter() << "\n";
+
+cout << "\n\nRectangle 2:\n\n";
+cout << "\nWidth:" << r2.getWidth() << "\nHeight:" << r2.getHeight();
+cout << "\nArea:" << r1.getArea() << "\nPerimeter:" << r2.getPerimeter() << "\n";
+
+
+
+    return 0;
+}
